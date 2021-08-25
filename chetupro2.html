@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .di{
+        
+        border:1px solid black;
+        width: 200px;
+        height: 250px;
+        background-color: cadetblue;
+        
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="di" align="center"><br><br>
+        <input type="text" id="h1" placeholder="price"></input><br><br>
+        <input type="text" id="h2" placeholder="quantity"></input><br><br>
+        <input type="text" id="h3" placeholder="tax"></input><br><br>
+        <button id="g1"click="btn">click</button>
+    </div>
+    <div id="e1"></div>
+    <script>
+        function calculate(){
+          var a=parseInt(document.getElementById("h1").value);
+          var b=parseInt(document.getElementById("h2").value);
+          var c=parseInt(document.getElementById("h3").value);
+          var result=(a*b*c)/100+c;
+          document.getElementById("e1").innerHTML=+result;
+        }
+        document.getElementById("g1").addEventListener("click",calculate)
+    </script>
+</body>
+</html>
